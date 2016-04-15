@@ -20,7 +20,8 @@ Plugin 'https://github.com/easymotion/vim-easymotion'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'https://github.com/scrooloose/nerdcommenter.git'
 Plugin 'https://github.com/vim-scripts/L9'
-Plugin 'https://github.com/wincent/command-t'
+Plugin 'https://github.com/kien/ctrlp.vim'
+Plugin 'https://github.com/scrooloose/nerdtree'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -41,11 +42,21 @@ inoremap <F8> <Esc>:nohl<CR>
 set noerrorbells
 "}}}
 
+"CtrlP Stuff{{{
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"}}}
+
 "Basic keybindings{{{
 noremap <leader>w :w<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap <c-o> o<ESC>O "makes a new line above and under the line you're on
+
+"CtrlP stuff
+map <leader>f :CtrlP<CR>
+map <leader>b :CtrlPBuffer<CR>
 "}}}
 
 "different estetic stuff{{{
