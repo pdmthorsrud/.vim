@@ -5,7 +5,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/home/pdthorsr/.vim/bundle/Vundle.vim
 call vundle#begin()
 set directory=.,$TEMP "makes vundle not come up with stupid and annoying error
 
