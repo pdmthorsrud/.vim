@@ -29,6 +29,7 @@ filetype plugin indent on    " required
 "}}}
 
 "basic stuff{{{
+set t_Co=256
 syntax enable
 imap jk <Esc>
 let mapleader=","
